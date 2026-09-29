@@ -40,3 +40,15 @@ This project uses Git for version control.
 - Feature branches are used for individual changes.
 - Changes are reviewed before being merged.
 - GitHub stores the remote repository.
+
+
+## Development Workflow
+
+1. Create a feature branch.
+2. Make the required code changes.
+3. Run tests locally.
+4. Push the feature branch.
+5. Open a pull request.
+6. Review and merge the changes.
+
+
