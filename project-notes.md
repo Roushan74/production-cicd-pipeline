@@ -109,3 +109,33 @@ npm and Git are installed.
 3. What is a fast-forward merge?
 4. What causes a merge conflict?
 5. How do you inspect changes before committing?
+
+
+
+
+
+
+
+## Day 5 — Bash Scripting and Automation
+
+### What I learned
+
+- Bash scripts automate repetitive commands.
+- A shebang specifies which interpreter should execute a script.
+- `chmod +x` gives a script execute permission.
+- `$(command)` performs command substitution.
+- `command -v` can check whether a command is available.
+- Bash conditions can handle success and failure.
+- Exit code 0 generally represents success.
+- Non-zero exit codes generally represent failure.
+- `exit 1` explicitly reports failure.
+- CI/CD systems use exit codes to determine whether a step succeeded.
+- `set -e` causes a Bash script to stop when a command fails.
+
+### Project Script
+
+Created:
+
+`scripts/check-environment.sh`
+
+The script checks whether Node.js, npm, Git, and Docker are installed.
