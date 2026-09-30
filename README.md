@@ -52,3 +52,17 @@ This project uses Git for version control.
 6. Review and merge the changes.
 
 
+
+## GitHub Pull Request Workflow
+
+This project follows a feature-branch workflow.
+
+1. Create a feature branch from main.
+2. Make changes locally.
+3. Commit the changes.
+4. Push the feature branch to GitHub.
+5. Create a Pull Request.
+6. Review the changes.
+7. Merge the Pull Request into main.
+
+
