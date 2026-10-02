@@ -1,0 +1,21 @@
+{
+  "name": "production-cicd-api",
+  "version": "1.0.0",
+  "description": "Task API for a production-style CI/CD pipeline project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "devops",
+    "cicd"
+  ],
+  "author": "Roushan",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

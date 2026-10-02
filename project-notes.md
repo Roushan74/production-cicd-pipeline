@@ -139,3 +139,37 @@ Created:
 `scripts/check-environment.sh`
 
 The script checks whether Node.js, npm, Git, and Docker are installed.
+
+
+
+
+
+
+
+
+## Day 6 — Node.js and Express API
+
+### What I learned
+
+- Node.js allows JavaScript to run outside the browser.
+- Express is a Node.js framework used to build HTTP servers and APIs.
+- `package.json` defines Node.js project metadata, dependencies, and scripts.
+- `npm install` installs project dependencies.
+- `node_modules` contains installed dependencies and should not be committed.
+- `.gitignore` prevents files such as `node_modules` and `.env` from being committed.
+- Environment variables can be accessed through `process.env`.
+- The application uses port 3000 by default.
+- Express middleware can process JSON request bodies.
+- HTTP routes define how the API responds to requests.
+- The `/health` endpoint can be used for deployment health checks.
+- The API currently stores task data in memory.
+
+### API Endpoints
+
+| Method | Endpoint | Purpose |
+|---|---|---|
+| GET | `/health` | Application health check |
+| GET | `/api/tasks` | Get all tasks |
+| GET | `/api/tasks/:id` | Get a specific task |
+| POST | `/api/tasks` | Create a task |
+| DELETE | `/api/tasks/:id` | Delete a task |
