@@ -173,3 +173,36 @@ The script checks whether Node.js, npm, Git, and Docker are installed.
 | GET | `/api/tasks/:id` | Get a specific task |
 | POST | `/api/tasks` | Create a task |
 | DELETE | `/api/tasks/:id` | Delete a task |
+
+
+
+
+
+
+
+
+## Day 7 — Automated Testing
+
+### What I learned
+
+- Automated tests verify application behavior without manual testing.
+- Unit tests test isolated pieces of functionality.
+- API/integration tests verify multiple application components working together.
+- Jest is used as the JavaScript testing framework.
+- Supertest is used to send HTTP requests to the Express application.
+- The Express application was separated from the server startup code.
+- `module.exports = app` allows the application to be imported by tests.
+- `describe()` groups related tests.
+- `test()` defines an individual test.
+- `expect()` defines an assertion.
+- HTTP status codes can be tested automatically.
+- API response bodies can also be tested.
+- `npm test` runs the automated test suite.
+- A successful test run returns exit code 0.
+- A failed test run returns a non-zero exit code.
+- CI/CD systems use these exit codes to determine whether a pipeline step passed or failed.
+
+### Testing Command
+
+```bash
+npm test

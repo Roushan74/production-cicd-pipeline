@@ -2,10 +2,11 @@
   "name": "production-cicd-api",
   "version": "1.0.0",
   "description": "Task API for a production-style CI/CD pipeline project",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js"
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "jest --runInBand"
   },
   "keywords": [
     "nodejs",
@@ -17,5 +18,9 @@
   "license": "MIT",
   "dependencies": {
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "jest": "^30.5.2",
+    "supertest": "^7.3.0"
   }
 }
