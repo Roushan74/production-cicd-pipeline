@@ -238,3 +238,34 @@ npm run test:coverage
 
 
 
+## Day 9 — CI Preparation
+
+### What I learned
+
+- CI environments should use reproducible dependency installation.
+- `npm ci` is designed for clean dependency installation in CI environments.
+- `package-lock.json` helps ensure consistent dependency versions.
+- `node_modules` should not be committed to Git.
+- Tests can be organized inside a dedicated `tests/` directory.
+- Jest automatically discovers test files using test naming conventions.
+- CI should stop when a required command fails.
+- `set -e` makes a Bash script stop when a command fails.
+- A local CI verification script can reproduce important CI steps before pushing code.
+
+### Local CI Verification
+
+Created:
+
+`scripts/ci-check.sh`
+
+The script performs:
+
+1. Dependency installation with `npm ci`
+2. Automated tests with `npm test`
+3. Coverage generation with `npm run test:coverage`
+
+### CI Principle
+
+```text
+Command succeeds → continue
+Command fails → stop
