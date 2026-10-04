@@ -13,6 +13,12 @@ describe("Health endpoint", () => {
 
     expect(response.body.status).toBe("ok");
   });
+
+  test("GET /health should return the correct service name", async () => {
+    const response = await request(app).get("/health");
+
+    expect(response.body.service).toBe("production-cicd-api");
+  });
 });
 
 describe("Tasks API", () => {
@@ -63,10 +69,29 @@ describe("Tasks API", () => {
     expect(response.body.error).toBe("Title is required");
   });
 
+  test("POST /api/tasks with empty title should return 400", async () => {
+    const response = await request(app)
+      .post("/api/tasks")
+      .send({
+        title: ""
+      });
+
+    expect(response.statusCode).toBe(400);
+    expect(response.body.error).toBe("Title is required");
+  });
+
   test("DELETE /api/tasks/1 should return 204", async () => {
     const response = await request(app)
       .delete("/api/tasks/1");
 
     expect(response.statusCode).toBe(204);
+  });
+
+  test("DELETE /api/tasks/999 should return 404", async () => {
+    const response = await request(app)
+      .delete("/api/tasks/999");
+
+    expect(response.statusCode).toBe(404);
+    expect(response.body.error).toBe("Task not found");
   });
 });

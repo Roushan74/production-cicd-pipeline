@@ -206,3 +206,35 @@ The script checks whether Node.js, npm, Git, and Docker are installed.
 
 ```bash
 npm test
+
+
+
+
+
+
+
+
+## Day 8 — Test Coverage
+
+### What I learned
+
+- Code coverage measures how much application code is exercised by automated tests.
+- Statement coverage measures executed statements.
+- Branch coverage measures executed decision paths.
+- Function coverage measures executed functions.
+- Line coverage measures executed lines.
+- High coverage does not automatically mean high-quality tests.
+- Coverage helps identify untested code paths.
+- Tests should ideally be isolated from one another.
+- Generated coverage reports should not be committed to Git.
+- Jest can generate HTML coverage reports.
+- `npm run test:coverage` runs tests and generates coverage information.
+
+### Coverage Command
+
+```bash
+npm run test:coverage
+
+
+
+
