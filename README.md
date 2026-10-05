@@ -66,3 +66,8 @@ This project follows a feature-branch workflow.
 7. Merge the Pull Request into main.
 
 
+
+
+## Continuous Integration
+
+GitHub Actions automatically runs the project's automated tests when changes are pushed to main or submitted through a pull request.
