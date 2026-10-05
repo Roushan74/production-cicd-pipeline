@@ -319,3 +319,57 @@ PASS / FAIL
 
 
 
+
+DAY 11 — CI Enhancement: Caching + Coverage + Artifacts
+
+Topics learned:
+- GitHub Actions dependency caching
+- npm cache
+- cache-dependency-path
+- Jest test coverage in CI
+- GitHub Actions artifacts
+- Cache vs artifact
+- CI output preservation
+
+Workflow improvements:
+- Enabled npm dependency caching
+- Added automated coverage generation
+- Added coverage report artifact upload
+
+Pipeline:
+
+Push / Pull Request
+        ↓
+Checkout
+        ↓
+Setup Node.js
+        ↓
+npm cache
+        ↓
+npm ci
+        ↓
+npm test
+        ↓
+npm run test:coverage
+        ↓
+Upload coverage artifact
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
