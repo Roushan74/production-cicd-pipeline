@@ -269,3 +269,53 @@ The script performs:
 ```text
 Command succeeds → continue
 Command fails → stop
+
+
+
+
+
+
+
+## Day 10 — GitHub Actions CI
+
+### What I learned
+
+- GitHub Actions automates development workflows.
+- A workflow defines automation triggered by repository events.
+- A job is a group of steps executed on a runner.
+- A runner is the machine that executes workflow commands.
+- `actions/checkout` makes repository code available to the runner.
+- `actions/setup-node` configures Node.js on the runner.
+- `npm ci` installs dependencies using the lockfile.
+- `npm test` runs the automated test suite.
+- A non-zero exit code causes the CI step to fail.
+- CI can run on pushes and Pull Requests.
+- Running CI on Pull Requests allows problems to be detected before merging into `main`.
+
+### CI Workflow
+
+Created:
+
+`.github/workflows/ci.yml`
+
+Pipeline:
+
+```text
+Checkout
+   ↓
+Setup Node.js
+   ↓
+npm ci
+   ↓
+npm test
+   ↓
+PASS / FAIL
+
+
+
+
+
+
+
+
+
