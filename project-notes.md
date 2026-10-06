@@ -361,6 +361,84 @@ Upload coverage artifact
 
 
 
+DAY 12 — CI Security & Secrets
+
+Topics learned:
+- Environment variables
+- .env files
+- GitHub Actions secrets
+- Secret injection through env
+- Secret validation
+- Fail-fast CI behavior
+- Never exposing secrets in logs
+- Never committing .env files
+
+Security flow:
+
+GitHub Secret
+      ↓
+GitHub Actions
+      ↓
+Environment Variable
+      ↓
+CI Step
+
+Implemented:
+- DEMO_SECRET repository secret
+- CI validation for required secret
+- Pipeline fails if secret is missing
+- .env remains ignored by Git
+
+
+
+
+
+
+
+
+
+DAY 13 — CI Quality Gates
+
+Topics learned:
+- Quality gates
+- ESLint
+- Code linting
+- Jest coverage thresholds
+- CI exit codes
+- Fail-fast strategy
+- Shift-left quality
+
+Implemented:
+- Added ESLint
+- Added npm lint script
+- Added Jest global coverage threshold
+- Added lint step to GitHub Actions
+- CI now fails when lint/tests/coverage requirements fail
+
+Quality flow:
+
+Code
+ ↓
+Install
+ ↓
+Lint
+ ↓
+Tests
+ ↓
+Coverage threshold
+ ↓
+Artifact
+ ↓
+PASS / FAIL
+
+
+
+
+
+
+
+
+
 
 
 
