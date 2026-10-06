@@ -361,6 +361,46 @@ Upload coverage artifact
 
 
 
+DAY 12 — CI Security & Secrets
+
+Topics learned:
+- Environment variables
+- .env files
+- GitHub Actions secrets
+- Secret injection through env
+- Secret validation
+- Fail-fast CI behavior
+- Never exposing secrets in logs
+- Never committing .env files
+
+Security flow:
+
+GitHub Secret
+      ↓
+GitHub Actions
+      ↓
+Environment Variable
+      ↓
+CI Step
+
+Implemented:
+- DEMO_SECRET repository secret
+- CI validation for required secret
+- Pipeline fails if secret is missing
+- .env remains ignored by Git
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
