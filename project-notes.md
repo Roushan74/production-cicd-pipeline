@@ -397,6 +397,44 @@ Implemented:
 
 
 
+DAY 13 — CI Quality Gates
+
+Topics learned:
+- Quality gates
+- ESLint
+- Code linting
+- Jest coverage thresholds
+- CI exit codes
+- Fail-fast strategy
+- Shift-left quality
+
+Implemented:
+- Added ESLint
+- Added npm lint script
+- Added Jest global coverage threshold
+- Added lint step to GitHub Actions
+- CI now fails when lint/tests/coverage requirements fail
+
+Quality flow:
+
+Code
+ ↓
+Install
+ ↓
+Lint
+ ↓
+Tests
+ ↓
+Coverage threshold
+ ↓
+Artifact
+ ↓
+PASS / FAIL
+
+
+
+
+
 
 
 
