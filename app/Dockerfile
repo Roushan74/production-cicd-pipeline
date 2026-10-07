@@ -4,9 +4,10 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm ci
+RUN npm ci --ignore-scripts
 
-COPY . .
+COPY index.js ./
+COPY server.js ./
 
 EXPOSE 3000
 
