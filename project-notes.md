@@ -439,7 +439,47 @@ PASS / FAIL
 
 
 
+DAY 14 — Docker Fundamentals
 
+Topics learned:
+- Docker
+- Docker image
+- Docker container
+- Dockerfile
+- Docker build
+- Docker run
+- Port mapping
+- Docker layers
+- Docker cache
+- .dockerignore
+- Container logs
+- docker exec
+
+Dockerfile:
+
+FROM node:24
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+EXPOSE 3000
+CMD ["node", "index.js"]
+
+Architecture:
+
+Local Application
+      ↓
+Docker Build
+      ↓
+Docker Image
+      ↓
+Docker Run
+      ↓
+Docker Container
+      ↓
+Node.js + Express
+      ↓
+Port 3000
 
 
 
