@@ -488,6 +488,64 @@ Port 3000
 
 
 
+DAY 15 — Docker In Depth
 
+Topics learned:
+- Alpine-based Node.js image
+- Docker image tags
+- Docker environment variables
+- Host port vs container port
+- Detached mode
+- Docker restart policy
+- Docker inspect
+- Docker logs
+- Docker health checks
+- Build once, configure at runtime
+
+Important commands:
+
+docker build
+docker run
+docker ps
+docker ps -a
+docker logs
+docker exec
+docker inspect
+docker stop
+docker start
+docker rm
+
+Important concepts:
+
+EXPOSE
+- Documents the container port.
+
+-p
+- Publishes/maps host port to container port.
+
+-e
+- Passes runtime environment variables.
+
+--restart unless-stopped
+- Automatically restarts the container when appropriate.
+
+HEALTHCHECK
+- Allows Docker to determine whether the application is healthy.
+
+Architecture:
+
+Docker Image
+     ↓
+Docker Container
+     ↓
+Environment Variables
+     ↓
+Node.js
+     ↓
+Express
+     ↓
+/health
+     ↓
+Docker Healthcheck
 
 
