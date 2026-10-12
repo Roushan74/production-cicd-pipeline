@@ -1,0 +1,10 @@
+services:
+  task-api:
+    build:
+      context: .
+    container_name: task-api-compose
+    ports:
+      - "4001:4000"
+    environment:
+      PORT: "4000"
+    restart: unless-stopped
