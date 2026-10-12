@@ -549,3 +549,40 @@ Express
 Docker Healthcheck
 
 
+
+
+
+
+
+
+
+DAY 16 — Docker Compose
+
+Topics learned:
+- Docker Compose
+- compose.yaml
+- Services
+- Build context
+- Port mapping
+- Environment variables
+- Restart policy
+- Container logs and lifecycle
+
+Important commands:
+docker compose up -d --build
+docker compose ps
+docker compose logs
+docker compose stop
+docker compose start
+docker compose down
+
+Architecture:
+compose.yaml
+     ↓
+Build Docker image
+     ↓
+Start Task API container
+     ↓
+Map host port 5000 to container port 4000
+     ↓
+Test /health endpoint
