@@ -549,3 +549,85 @@ Express
 Docker Healthcheck
 
 
+
+
+
+
+
+
+
+DAY 16 — Docker Compose
+
+Topics learned:
+- Docker Compose
+- compose.yaml
+- Services
+- Build context
+- Port mapping
+- Environment variables
+- Restart policy
+- Container logs and lifecycle
+
+Important commands:
+docker compose up -d --build
+docker compose ps
+docker compose logs
+docker compose stop
+docker compose start
+docker compose down
+
+Architecture:
+compose.yaml
+     ↓
+Build Docker image
+     ↓
+Start Task API container
+     ↓
+Map host port 5000 to container port 4000
+     ↓
+Test /health endpoint
+
+
+
+
+
+
+
+
+
+
+
+
+DAY 17 — Docker Networking
+
+Topics learned:
+- Docker networks
+- Bridge networking
+- Host and container ports
+- User-defined bridge networks
+- Container-to-container communication
+- Docker DNS and container names
+- Network inspection
+- Port publishing
+- Network isolation
+
+Important commands:
+docker network ls
+docker network create
+docker network inspect
+docker network connect
+docker network disconnect
+docker network rm
+
+Key concept:
+Containers connected to the same user-defined bridge
+network can communicate using container names.
+
+Port publishing is not generally required for
+communication between containers on the same network.
+
+
+
+
+
+
